@@ -1,8 +1,8 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
 
-class NetworkingWeather{
-NetworkingWeather(this.url);
+class WeatherData{
+WeatherData(this.url);
 final String url;
 
 Future getnetworkweather()async

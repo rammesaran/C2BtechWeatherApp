@@ -1,6 +1,6 @@
 
 import 'package:c2b_weatherapp/services/get_location.dart';
-import 'package:c2b_weatherapp/services/networking.dart';
+import 'package:c2b_weatherapp/services/weather_data.dart';
 
 const apikey = 'f281424d5defc4a87018350c04692e28';
 const weatherurl = 'http://api.weatherstack.com/current';
@@ -8,7 +8,7 @@ class WeatherModel {
 Future<dynamic> getinputlocation(String cityname) async
 {
   var url ='$weatherurl?access_key=$apikey&query=$cityname&unites=m';
-  NetworkingWeather weather =  NetworkingWeather(url);
+  WeatherData weather =  WeatherData(url);
   var weatherresult = await weather.getnetworkweather();
   return weatherresult;
 }
@@ -19,7 +19,7 @@ Future<dynamic> getLocationWeather() async
     await location.getuserlocation();
 
       var url ='$weatherurl?access_key=$apikey&query=';
-    NetworkingWeather networkingWeather = NetworkingWeather(
+    WeatherData networkingWeather = WeatherData(
         '$url${location.latitiude},${location.longitiude}&units=m');
 
     var weatherdata = await networkingWeather.getnetworkweather();
