@@ -20,7 +20,7 @@ const kTextInputStle = InputDecoration(
   filled: true,
   fillColor: Colors.white,
   icon: Icon(
-    Icons.location_city,
+    Icons.location_searching,
     color: Colors.white,
   ),
   hintText: 'Enter cityname',

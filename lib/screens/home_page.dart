@@ -4,15 +4,15 @@ import 'package:c2b_weatherapp/utiles/constant.dart';
 import 'package:flutter/material.dart';
 
 
-class LocationScreen extends StatefulWidget {
-  LocationScreen({this.locationscreen});
+class HomePageScreen extends StatefulWidget {
+  HomePageScreen({this.locationscreen});
   final locationscreen;
 
   @override
-  _LocationScreenState createState() => _LocationScreenState();
+  _HomePageScreenState createState() => _HomePageScreenState();
 }
 
-class _LocationScreenState extends State<LocationScreen> {
+class _HomePageScreenState extends State<HomePageScreen> {
   WeatherModel weatherModel = WeatherModel();
   int temparture;
   String description;
@@ -153,7 +153,7 @@ void updaterror(dynamic weatherdata){
 
                Padding(
                 padding: EdgeInsets.only(right: 15.0),
-                child: Text(  weatherdescription.join().toString() ?? "empty",
+                child: Text(  weatherdescription.join().toString() ?? "",
                   
                   textAlign: TextAlign.right,
                   style: kMessageTextStyle,

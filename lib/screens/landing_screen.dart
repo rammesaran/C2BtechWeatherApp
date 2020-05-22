@@ -1,5 +1,5 @@
 import 'package:c2b_weatherapp/model/weather_model.dart';
-import 'package:c2b_weatherapp/screens/location_page.dart';
+import 'package:c2b_weatherapp/screens/home_page.dart';
 import 'package:flutter/material.dart';
 
 
@@ -25,7 +25,7 @@ class _LandingPageState extends State<LandingPage> {
     Navigator.push(
       context,
       MaterialPageRoute(builder: (context) {
-        return LocationScreen(
+        return HomePageScreen(
          locationscreen: weatherdata
         );
       }),
